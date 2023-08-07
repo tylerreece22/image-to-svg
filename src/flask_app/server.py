@@ -1,3 +1,5 @@
+
+
 import os
 from flask import Flask, flash, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
@@ -27,10 +29,10 @@ def upload_file():
         file = request.files["file"]
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            app.logger.debug("filename", filename)
+            app.logger.debug(f"filename {filename}")
             file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
             new_filename = filename.split(".")[0] + ".svg"
-            app.logger.debug("new_filename", new_filename)
+            app.logger.debug(f"new_filename {new_filename}")
 
             # convert and save svg file
             convert_image_to_svg(
