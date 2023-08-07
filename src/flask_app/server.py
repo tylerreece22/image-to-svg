@@ -1,9 +1,7 @@
-
-
 import os
 from flask import Flask, flash, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
-from image_to_svg import convert_image_to_svg
+from src.image_to_svg import convert_image_to_svg
 
 UPLOAD_FOLDER = (
     "/Users/tylerreece/Development/temp/python-practice-server/flask_app/uploads"

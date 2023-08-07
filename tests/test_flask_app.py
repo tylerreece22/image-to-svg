@@ -3,7 +3,7 @@ import unittest
 
 import pytest
 
-from flask_app import app
+from src.flask_app import app
 
 
 class TestPageLoad(unittest.TestCase):
