@@ -4,13 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["Tyler Reece"]
 readme = "README.md"
-packages = [{include = "python_practice_server"}]
+packages = [{include = "flask_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 svgwrite = "^1.4.3"
 pillow = "^10.0.0"
 potracer = "^0.0.4"
+flask = "^2.3.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -19,3 +20,5 @@ black = "^23.7.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
